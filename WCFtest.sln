@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Application", "Application\", "{7C1A865A-3F36-44CB-A5F6-AC83A96031D1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Application"
+		Debug.AspNetCompiler.PhysicalPath = "Application\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Application\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Application"
+		Release.AspNetCompiler.PhysicalPath = "Application\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Application\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6} = {FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportServiceLibrary", "ReportServiceLibrary\ReportServiceLibrary.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "ReportService\ReportService.csproj", "{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C1A865A-3F36-44CB-A5F6-AC83A96031D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1A865A-3F36-44CB-A5F6-AC83A96031D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1A865A-3F36-44CB-A5F6-AC83A96031D1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1A865A-3F36-44CB-A5F6-AC83A96031D1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
