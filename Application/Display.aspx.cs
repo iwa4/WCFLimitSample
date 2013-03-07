@@ -5,9 +5,9 @@ public partial class Display : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        var key = Request.QueryString["key"];
         try
         {
-            var key = Request.QueryString["key"];
             var returnBytes = Session[key] as Byte[];
             if (returnBytes != null)
             {
@@ -19,7 +19,7 @@ public partial class Display : System.Web.UI.Page
         }
         finally
         {
-            Session.Clear();
+            Session.Remove(key);
         }
     }
 }

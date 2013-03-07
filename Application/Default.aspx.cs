@@ -12,9 +12,9 @@ public partial class _Default : System.Web.UI.Page
         request.LastName = "Wonderland";
         request.FilePath = @"E:\develop\WCFtest\report\JavaScript.pdf";
 
-        var proxy = new DoSomethingServiceProxy();
         try
         {
+            var proxy = new DoSomethingServiceProxy();
             var returnBytes = proxy.DoSomething(request);
             Session.Add("getKey", returnBytes);
         }
