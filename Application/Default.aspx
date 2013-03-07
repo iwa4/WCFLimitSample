@@ -16,7 +16,7 @@
 
 <body>
     <div>
-        <iframe src="Report.aspx?key=getKey&filename=Report.pdf"></iframe>
+        <iframe src="Display.aspx?key=getKey&filename=hoge.pdf"></iframe>
     </div>
 </body>
 </html>

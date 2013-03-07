@@ -18,6 +18,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Application", "Application\
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57958"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
 		{FB28802F-F80F-4A3E-96AF-F8BC920FDDB6} = {FB28802F-F80F-4A3E-96AF-F8BC920FDDB6}

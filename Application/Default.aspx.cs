@@ -7,65 +7,51 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var rp = new RequestParameter();
-        rp.param1 = "hoge";
-        rp.param2 = "fuga";
+        var request = new DoSomethingRequest();
+        request.FirstName = "Alice";
+        request.LastName = "Wonderland";
+        request.FilePath = @"E:\develop\WCFtest\report\JavaScript.pdf";
 
-        var proxy = new ReportServiceProxy();
+        var proxy = new DoSomethingServiceProxy();
         try
         {
-            var report = proxy.ReadReport(rp);
-            Session.Add("getKey", report);
+            var returnBytes = proxy.DoSomething(request);
+            Session.Add("getKey", returnBytes);
         }
         catch (FaultException<LimitError>)
         {
-            //実行制限OVERのエラー
+            //実行制限OVERのエラー。アプリケーションエラーとして扱う。
+            System.Diagnostics.Debug.WriteLine("実行数OVER");
         }
         catch (Exception)
         {
-            //WCF通信のエラー
+            //その他エラー。システムエラーとして扱う。
+            System.Diagnostics.Debug.WriteLine("WCF通信エラー");
         }
     }
 }
 
-public class ReportServiceProxy
+public class DoSomethingServiceProxy
 {
-    public Stream ReadReport(RequestParameter rp)
+    public Byte[] DoSomething(DoSomethingRequest request)
     {
         var proxy = new ReportServiceLibClient();
         try
         {
-            Stream report = null;
-            using (var stream = proxy.ReadReport(rp))
+            Byte[] returnBytes;
+            using (var returnStream = proxy.DoSomething(request))
+            using (var tempStream = new MemoryStream())
             {
-                report = ConvertMessageToStream(stream);
+                returnStream.CopyTo(tempStream);
+                returnBytes = tempStream.ToArray();
             }
             proxy.Close();
-            return report;
+            return returnBytes;
         }
-        catch (FaultException<LimitError>)
+        catch
         {
             proxy.Abort();
             throw;
         }
-        catch (Exception)
-        {
-            proxy.Abort();
-            throw;
-        }
-    }
-
-    private Stream ConvertMessageToStream(Stream input)
-    {
-        const int chunkSize = 4096;
-        var buffer = new Byte[chunkSize];
-        var output = new MemoryStream();
-        while (true)
-        {
-            var bytesRead = input.Read(buffer, 0, chunkSize);
-            if (bytesRead == 0) break;
-            output.Write(buffer, 0, bytesRead);
-        }
-        return output;
     }
 }

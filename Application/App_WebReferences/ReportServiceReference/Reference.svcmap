@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0b81a2f2-66f1-45d5-a229-f72410d87545" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65660afa-2b25-4db7-908b-620ead16a03e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -8,11 +8,13 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
-    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
     <ReferencedAssemblies />
     <ReferencedDataContractTypes />
     <ServiceContractMappings />
@@ -21,13 +23,12 @@
     <MetadataSource Address="http://localhost:8083/ReportService/ReportService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReportService.xsd" MetadataType="Schema" ID="4115af15-51bc-4df2-8783-04d2f269fb61" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ReportService1.xsd" MetadataType="Schema" ID="630dcddf-5880-4bfe-933a-53fb48bc93fc" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ReportService2.xsd" MetadataType="Schema" ID="69ebb56a-89ff-448c-a6d6-67b2ab640ff2" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?xsd=xsd4" />
-    <MetadataFile FileName="ReportService3.xsd" MetadataType="Schema" ID="d193b8d3-146a-41a1-a15a-10597a40f7b2" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ReportServiceLib.wsdl" MetadataType="Wsdl" ID="8678a764-7987-46dd-b0ce-4017b023cead" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?wsdl" />
-    <MetadataFile FileName="ReportService.disco" MetadataType="Disco" ID="741d609b-d7e0-45d9-bd83-be0040017bb4" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?disco" />
-    <MetadataFile FileName="ReportService4.xsd" MetadataType="Schema" ID="fd62a70e-f188-4f30-a566-07df4c7a8e12" SourceId="1" SourceUrl="http://localhost:8083/ReportService/ReportService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ReportService.xsd" MetadataType="Schema" ID="a79087ec-6d7c-4a2f-a9fb-de09d2fa2fbe" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportService1.xsd" MetadataType="Schema" ID="e4a08546-1e25-47de-b7bc-18cdbeb2a5f8" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReportService3.xsd" MetadataType="Schema" ID="1f65de2d-5e54-4c08-b3bd-0e9a7b61197a" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReportServiceLib.wsdl" MetadataType="Wsdl" ID="e6cb0d24-5f29-449e-ad27-f16b9daa7ae7" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?wsdl" />
+    <MetadataFile FileName="ReportService.disco" MetadataType="Disco" ID="6465ac26-e002-4dc9-9fde-1031ffeda675" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?disco" />
+    <MetadataFile FileName="ReportService4.xsd" MetadataType="Schema" ID="5fd63396-3bce-4b45-be09-cbe0a12db214" SourceId="1" SourceUrl="http://isidg70889.snet.isid.co.jp:8083/ReportService/ReportService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

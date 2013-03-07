@@ -2,8 +2,8 @@
 class Limit
 {
     private static Limit singleton = new Limit();
-    private int runCounter;
-    private object lockObject;
+    private int runCounter;     //現在実行数を保持するカウンタ
+    private object lockObject;  //カウンタをインクリメント or デクリメントする際の排他用オブジェクト
 
     private Limit()
     {
@@ -21,7 +21,7 @@ class Limit
         lock (lockObject)
         {
             var token = new Token();
-            token.IsLimitError = IsLimitError(runCounter);
+            token.IsLimitError = IsLimitError();
             return token;
         }
     }
@@ -34,13 +34,12 @@ class Limit
         }
     }
 
-    private bool IsLimitError(int runCounter)
+    private bool IsLimitError()
     {
-        var limitNum = 3;           //<= 同時実行数。実際はconfigなど外部に保持する。
+        var limitNum = 1;   //<= 同時実行数。実際はconfigなど外部に保持する。
         if (runCounter < limitNum)
         {
-            //チェックOKの場合のみインクリメントを行う
-            runCounter++;
+            runCounter++;   //チェックOKの場合のみインクリメント
             return false;
         }
         else

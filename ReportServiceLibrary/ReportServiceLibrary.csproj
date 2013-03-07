@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Limit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestParameter.cs" />
+    <Compile Include="DoSomethingRequest.cs" />
     <Compile Include="ReportServiceLib.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
