@@ -5,12 +5,13 @@ using System.ServiceModel;
 
 public partial class _Default : System.Web.UI.Page
 {
+    public string hoge;
     protected void Page_Load(object sender, EventArgs e)
     {
         var request = new DoSomethingRequest();
         request.FirstName = "Alice";
         request.LastName = "Wonderland";
-        request.FilePath = @"E:\develop\WCFtest\report\JavaScript.pdf";
+        request.FilePath = @"C:\Temp\JavaScript.pdf";
 
         try
         {
@@ -28,6 +29,7 @@ public partial class _Default : System.Web.UI.Page
             //その他エラー。システムエラーとして扱う。
             System.Diagnostics.Debug.WriteLine("WCF通信エラー");
         }
+        hoge = null;
     }
 }
 

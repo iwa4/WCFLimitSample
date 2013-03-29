@@ -18,5 +18,8 @@
     <div>
         <iframe src="Display.aspx?key=getKey&filename=hoge.pdf"></iframe>
     </div>
+    <script>
+        alert('<%= hoge%>');
+    </script>
 </body>
 </html>
