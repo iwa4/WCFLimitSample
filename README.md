@@ -3,5 +3,4 @@ WCFLimitSample
 
 WCFLimitSample
 
-Hello,Pull Request
-Hello,Pull Request 2nd
+Hello,Pull Request 3rd
