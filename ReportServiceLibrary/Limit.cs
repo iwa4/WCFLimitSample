@@ -36,7 +36,7 @@ class Limit
 
     private bool IsLimitError()
     {
-        var limitNum = 1;   //<= 同時実行数。実際はconfigなど外部に保持する。
+        var limitNum = 3;   //<= 同時実行数。実際はconfigなど外部に保持する。
         if (runCounter < limitNum)
         {
             runCounter++;   //チェックOKの場合のみインクリメント
